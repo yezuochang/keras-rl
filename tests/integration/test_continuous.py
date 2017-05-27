@@ -85,6 +85,8 @@ def test_ddpg():
                       random_process=random_process, gamma=.99, target_model_update=1e-3)
     agent.compile([Adam(lr=1e-3), Adam(lr=1e-3)])
 
-    agent.fit(env, nb_steps=400, visualize=False, verbose=0, nb_max_episode_steps=100)
-    h = agent.test(env, nb_episodes=2, visualize=False, nb_max_episode_steps=100)
+    agent.fit(env, nb_steps=4000, visualize=False, verbose=2, nb_max_episode_steps=1000)
+    h = agent.test(env, nb_episodes=20, visualize=False, nb_max_episode_steps=1000)
     # TODO: evaluate history
+
+test_ddpg()

@@ -1,3 +1,29 @@
+<span style="float:right;">[[source]](https://github.com/matthiasplappert/keras-rl/blob/master/rl/core.py#L566)</span>
+### Env
+
+```python
+rl.core.Env()
+```
+
+The abstract environment class that is used by all agents. This class has the exact
+same API that OpenAI Gym uses so that integrating with it is trivial. In contrast to the
+OpenAI Gym implementation, this class only defines the abstract methods without any actual
+implementation.
+
+----
+
+<span style="float:right;">[[source]](https://github.com/matthiasplappert/keras-rl/blob/master/rl/core.py#L642)</span>
+### Space
+
+```python
+rl.core.Space()
+```
+
+Abstract model for a space that is used for the state and action spaces. This class has the
+exact same API that OpenAI Gym uses so that integrating with it is trivial.
+
+----
+
 <span style="float:right;">[[source]](https://github.com/matthiasplappert/keras-rl/blob/master/rl/core.py#L11)</span>
 ### Agent
 
@@ -73,30 +99,4 @@ __Arguments__
 - __nb_inputs__ (integer): The number of inputs, that is different modalities, to be used.
 	Your neural network that you use for the policy must have a corresponding number of
 	inputs.
-
-----
-
-<span style="float:right;">[[source]](https://github.com/matthiasplappert/keras-rl/blob/master/rl/core.py#L566)</span>
-### Env
-
-```python
-rl.core.Env()
-```
-
-The abstract environment class that is used by all agents. This class has the exact
-same API that OpenAI Gym uses so that integrating with it is trivial. In contrast to the
-OpenAI Gym implementation, this class only defines the abstract methods without any actual
-implementation.
-
-----
-
-<span style="float:right;">[[source]](https://github.com/matthiasplappert/keras-rl/blob/master/rl/core.py#L642)</span>
-### Space
-
-```python
-rl.core.Space()
-```
-
-Abstract model for a space that is used for the state and action spaces. This class has the
-exact same API that OpenAI Gym uses so that integrating with it is trivial.
 
