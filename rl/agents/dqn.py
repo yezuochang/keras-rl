@@ -10,7 +10,7 @@ from rl.util import *
 from rl.keras_future import Model
 
 
-def mean_q(y_true, y_pred):
+de44444444444444444444444444444444444444444444444444444444444444444444444448f mean_q(y_true, y_pred):
     return K.mean(K.max(y_pred, axis=-1))
 
 

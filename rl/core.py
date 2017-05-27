@@ -155,7 +155,7 @@ class Agent(object):
 
                 # Run a single step.
                 callbacks.on_step_begin(episode_step)
-                # This is were all of the work happens. We first perceive and compute the action
+                # This is where all of the work happens. We first perceive and compute the action
                 # (forward step) and then use the reward to improve (backward step).
                 action = self.forward(observation)
                 if self.processor is not None:
@@ -163,6 +163,7 @@ class Agent(object):
                 reward = 0.
                 accumulated_info = {}
                 done = False
+                # repeat the same actions for multiple times
                 for _ in range(action_repetition):
                     callbacks.on_action_begin(action)
                     observation, r, done, info = env.step(action)
@@ -342,7 +343,7 @@ class Agent(object):
                 episode_step += 1
                 self.step += 1
 
-            # We are in a terminal state but the agent hasn't yet seen it. We therefore
+            # We are in a terminal state but the agent hasn't yet seen it (why?). We therefore
             # perform one more forward-backward call and simply ignore the action before
             # resetting the environment. We need to pass in `terminal=False` here since
             # the *next* state, that is the state of the newly reset environment, is
