@@ -89,4 +89,4 @@ def test_ddpg():
     h = agent.test(env, nb_episodes=20, visualize=False, nb_max_episode_steps=1000)
     # TODO: evaluate history
 
-test_ddpg()
+test_cdqn()

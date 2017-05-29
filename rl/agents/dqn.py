@@ -544,7 +544,7 @@ class NAFLayer(Layer):
                 "Input 2 (action) should have {} elements but has {}".format(self.nb_actions, input_shape[1][1]))
         return input_shape[0][0], 1
 
-
+# https://arxiv.org/pdf/1603.00748.pdf
 class NAFAgent(AbstractDQNAgent):
     """Write me
     """
